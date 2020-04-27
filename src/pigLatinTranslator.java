@@ -77,12 +77,12 @@ public class pigLatinTranslator {
 	public static String capitalize(String word) {
 		return word.substring(0, 1).toUpperCase() + word.substring(1).toLowerCase();
 	}
-	public static boolean containsSpecialCharacter(String password) 
+	public static boolean containsSpecialCharacter(String userString) 
 	{
 	    Pattern digit = Pattern.compile("[0-9]");
 	    Pattern special = Pattern.compile ("[!@#$%&*()_+=|<>?{}\\[\\]~-]");
-	    Matcher hasDigit = digit.matcher(password);
-	    Matcher hasSpecial = special.matcher(password);
+	    Matcher hasDigit = digit.matcher(userString);
+	    Matcher hasSpecial = special.matcher(userString);
 
 	    return hasDigit.find() || hasSpecial.find();
 	}
